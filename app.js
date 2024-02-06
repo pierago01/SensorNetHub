@@ -30,7 +30,7 @@ var container = database.container("<container-name>");
 var indexRouter = require("./routes/index");
 var graficoRouter = require("./routes/grafico");
 
-// Monta le  route sull'applicazione web
+// Monta le route sull'applicazione web
 app.use(expressLayout);
 app.use("/", indexRouter);
 app.use("/grafico", graficoRouter);
