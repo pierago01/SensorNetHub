@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title><%= title %></title>
+  <meta charset="utf-8" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <h1><%= message %></h1>
+  <% for (var rfid in devices) { %>
+    <div>
+      <h2>Dispositivo <%= rfid %></h2>
+      <canvas id="chart-<%= rfid %>" width="400" height="200"></canvas>
+    </div>
+  <% } %>
+
+  <script>
+    <% for (var rfid in devices) { %>
+        var ctx = document.getElementById('chart-<%= rfid %>').getContext('2d');
+        var temperatures = <%= JSON.stringify(devices[rfid].map(item => item.temperature)) %>;
+        var humidities = <%= JSON.stringify(devices[rfid].map(item => item.humidity)) %>;
+        var labels = <%= JSON.stringify(devices[rfid].map((_, index) => index)) %>; 
+
+      new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labels,
+          datasets: [{
+            label: 'Temperatura',
+            data: temperatures,
+            borderColor: 'rgb(255, 99, 132)',
+            fill: false
+          }, {
+            label: 'Umidità',
+            data: humidities,
+            borderColor: 'rgb(54, 162, 235)',
+            fill: false
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    <% } %>
+  </script>
+</body>
+</html>
