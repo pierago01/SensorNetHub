@@ -19,7 +19,8 @@
         var ctx = document.getElementById('chart-<%= rfid %>').getContext('2d');
         var temperatures = <%= JSON.stringify(devices[rfid].map(item => item.temperature)) %>;
         var humidities = <%= JSON.stringify(devices[rfid].map(item => item.humidity)) %>;
-        var labels = <%= JSON.stringify(devices[rfid].map((_, index) => index)) %>; 
+        var labels = <%= JSON.stringify(devices[rfid].map((_, index) => index)) %>; // o un'altra proprietà significativa
+        //var labels = <%= JSON.stringify(devices[rfid].map(item => item.ts )) %>;
 
       new Chart(ctx, {
         type: 'line',

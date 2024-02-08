@@ -7,13 +7,13 @@ var router = express.Router();
 
 // Crea un'istanza del client CosmosDB
 var client = new CosmosClient({
-  endpoint: "<endpoint-uri",
-  key: "<primary-key>"
+  endpoint: "https://cosmosdbiotaccount.documents.azure.com:443/",
+  key: "g2knAIeMCAMc4FCSvDMH5Hh4KhOLkaTnTNGC0TtWNah83qaAVL8bwLSnJCtdZcUyNLAgP1haY9opACDbpTKDCg=="
 });
 
 // Seleziona il database e il contenitore da usare
-var database = client.database("<database-name>");
-var container = database.container("<container-name>");
+var database = client.database("dbsensornet");
+var container = database.container("cont1");
 
 async function renderGraphs(query, res) {
   try {
