@@ -13,6 +13,7 @@ permettendo in ogni momento di avere il controllo, riducendo al minimo il rischi
     <img width="500" src="https://github.com/pierago01/SensorNetHub/assets/81223389/1c98b930-5187-4155-a352-f0bc85f4f0c9">
 </p>
 L'architettura è divisa in due parti principali:
+
 1. **IoTHub -> CosmosDB -> AppService**: I dati inviati dai sensori attraverso IoTHub vengono salvati in CosmosDB e visualizzati tramite un'applicazione web ospitata su AppService.
 2. **IoTHub -> ServiceBus -> Logic App**: Gli alert generati da IoTHub relativi alla temperatura o all'umidità vengono inviati a ServiceBus, che a sua volta attiva una Logic App per l'invio di e-mail di notifica.
 
