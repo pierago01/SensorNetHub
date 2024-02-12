@@ -33,10 +33,9 @@ npm install
 ## Setting up Azure Resources 
 To set up the necessary Azure resources, follow these steps using Azure CLI:
 1. Log in to your Azure account:
-
-```bash
-az login
-```
+    ```bash
+    az login
+    ```
 2. Create a resource group (replace <ResourceGroupName> and <Location> with your desired resource group name and Azure region):
    ```bash
     az group create --name <ResourceGroupName> --location <Location>
@@ -46,15 +45,15 @@ az login
    az iot hub create --name <IoTHubName> --resource-group <ResourceGroupName> --sku F1 --partition-count 2
    ```
 4. Create a CosmosDB Account:
-      ```bash
+ ```bash
   az cosmosdb create --name <CosmosDBName> --resource-group <ResourceGroupName>
    ```
 5. Create a database:
-          ```bash
+   ```bash
   az cosmosdb sql database create -n <DatabaseName> -a <CosmosDBName>  -g <ResourceGroupName>
    ```
 6. Create a container:
-       ```bash
+```bash
   az cosmosdb sql container create -n <ContainerName> --partition-key-path "/Tenantid" -d <DatabaseName> -a <CosmosDBName> -g <ResourceGroupName>
    ```
 7. Create an App Service Plan:
@@ -74,7 +73,7 @@ az iot hub route create --resource-group <ResourceGroupName> --hub-name <IoTHubN
 az servicebus namespace create --resource-group <ResourceGroupName> --name <ServiceBusNamespaceName> --location <Location>
 ```
 11. Create a Service Bus queue:
-    ```bash
+```bash
 az servicebus queue create --namespace-name <ServiceBusNamespaceName> --name <QueueName> --resource-group <ResourceGroupName>
 ```
 12. Create a Logic App:
