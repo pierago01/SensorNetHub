@@ -37,17 +37,17 @@ To set up the necessary Azure resources, follow these steps using Azure CLI:
  ```bash
  az login
   ```
-3. Create a resource group (replace <ResourceGroupName> and <Location> with your desired resource group name and Azure region):
+2. Create a resource group (replace <ResourceGroupName> and <Location> with your desired resource group name and Azure region):
    
 ```bash
 az group create --name <ResourceGroupName> --location <Location>
  ```
-4. Create an IoT Hub:
+3. Create an IoT Hub:
    
 ```bash
 az iot hub create --name <IoTHubName> --resource-group <ResourceGroupName> --sku F1 --partition-count 2
 ```
-5. Create a CosmosDB Account:
+4. Create a CosmosDB Account:
    
  ```bash
   az cosmosdb create --name <CosmosDBName> --resource-group <ResourceGroupName>
