@@ -34,19 +34,19 @@ npm install
 To set up the necessary Azure resources, follow these steps using Azure CLI:
 1. Log in to your Azure account:
    
-    ```bash
-    az login
-    ```
+ ```bash
+ az login
+  ```
 3. Create a resource group (replace <ResourceGroupName> and <Location> with your desired resource group name and Azure region):
    
-   ```bash
-    az group create --name <ResourceGroupName> --location <Location>
-    ```
+```bash
+az group create --name <ResourceGroupName> --location <Location>
+ ```
 4. Create an IoT Hub:
    
-   ```bash
-   az iot hub create --name <IoTHubName> --resource-group <ResourceGroupName> --sku F1 --partition-count 2
-   ```
+```bash
+az iot hub create --name <IoTHubName> --resource-group <ResourceGroupName> --sku F1 --partition-count 2
+```
 5. Create a CosmosDB Account:
    
  ```bash
