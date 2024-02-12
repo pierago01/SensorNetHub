@@ -1,7 +1,7 @@
 # SensorNetHub
 
 ## Description
-SensorNetHub is a project that leverages various Azure services to collect, store, and display data from IoT sensors. It is particularly aimed at companies wishing to graphically monitor parameters such as temperature and humidity of their industrial machinery, thus maintaining control at all times and minimizing the risk of production downtime.
+SensorNetHub is a project that leverages various Azure services to collect, store, and display data from IoT devices. It is particularly aimed at companies wishing to graphically monitor parameters such as temperature and humidity of their industrial machinery, thus maintaining control at all times and minimizing the risk of production downtime.
 <p align='center'> 
     <img width="500" src="https://github.com/pierago01/SensorNetHub/assets/81223389/fd718d4b-6f26-40d9-b000-1fc5ac111681">
 </p>
