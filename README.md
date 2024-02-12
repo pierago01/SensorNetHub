@@ -92,3 +92,16 @@ az servicebus queue create --namespace-name <ServiceBusNamespaceName> --name <Qu
 ```bash
 az logicapp create --name <LogicAppName> --resource-group <ResourceGroupName> --location <Location>
 ```
+## Execution
+The Web App can run both on Cloud and locally using the Node.js. Web app will work in the same way but is clearly better to run it in a local environment while testing the web pages.
+### Local hosting
+1. Open a terminal in SensorNetHub folder and start the web app
+```bash
+npm start
+```
+2. Open the browser and go to localhost
+3. Use any IoT devices emulator to generate messages (for example: https://azure-samples.github.io/raspberry-pi-web-simulator/#getstarted).
+### Cloud hosting
+1. Once deployed SensorNetHub on the Azure App Services, open the link "https://yourWebAppName.azurewebsites.net"
+2. You need to login at "https://yourWebAppName.azurewebsites.net/.auth/login/google/".
+3. Use any IoT devices emulator to generate messages.
