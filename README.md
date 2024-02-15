@@ -45,7 +45,7 @@ az group create --name <ResourceGroupName> --location <Location>
 3. Create an IoT Hub:
    
 ```bash
-az iot hub create --name <IoTHubName> --resource-group <ResourceGroupName> --sku F1 --partition-count 2
+az iot hub create --name <IoTHubName> --resource-group <ResourceGroupName> --sku B1
 ```
 4. Create a CosmosDB Account:
    
